@@ -1,3 +1,5 @@
+# CSS3 RoadMap
+
 ## CSS3
 1. Selectors
 2. Cascade
@@ -15,22 +17,22 @@
 14. Animations
 
 ### Projects
->Easy
->>Transparent Login Form 
-Responsive Video Background 
+1.Easy
+- Transparent Login Form 
+- Responsive Video Background 
 
->Medium
->>CSS Only Tooltips 
-CSS Emoji Art 
-CSS Face Art 
-Advanced Hover Effects 
-Animated Page Load 
-Custom Checkbox Tutorial 
-3D Flip Button 
-Animated Loading Spinner 
+2.Medium
+- CSS Only Tooltips 
+- CSS Emoji Art 
+- CSS Face Art 
+- Advanced Hover Effects 
+- Animated Page Load 
+- Custom Checkbox Tutorial 
+- 3D Flip Button 
+- Animated Loading Spinner 
 
->Hard
->>YouTube Clone 
-Price Comparison Table 
-Landing Page 1 
-Landing Page 2 - Vide
+3.Hard
+- YouTube Clone 
+- Price Comparison Table 
+- Landing Page 1 
+- Landing Page 2 - Vide
