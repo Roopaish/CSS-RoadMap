@@ -1,6 +1,7 @@
 # CSS3 RoadMap
 
 ## CSS3
+
 1. Selectors
 2. Cascade
 3. Box Model
@@ -17,22 +18,26 @@
 14. Animations
 
 ### Projects
+
 1.Easy
-- Transparent Login Form [preview](https://roopaish.github.io/CSS-RoadMap/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Transparent%20Login%20Form)
-- Responsive Video Background 
 
-2.Medium
-- CSS Only Tooltips 
-- CSS Emoji Art 
-- CSS Face Art 
-- Advanced Hover Effects 
-- Animated Page Load 
-- Custom Checkbox Tutorial 
-- 3D Flip Button 
-- Animated Loading Spinner 
+- Transparent Login Form [preview](https://roopaish.github.io/CSS-RoadMap/ransparent%20Login%20Form) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Transparent%20Login%20Form)
+- Responsive Video Background
 
-3.Hard
-- YouTube Clone 
-- Price Comparison Table 
-- Landing Page 1 
+  2.Medium
+
+- CSS Only Tooltips
+- CSS Emoji Art
+- CSS Face Art
+- Advanced Hover Effects
+- Animated Page Load
+- Custom Checkbox Tutorial
+- 3D Flip Button
+- Animated Loading Spinner
+
+  3.Hard
+
+- YouTube Clone
+- Price Comparison Table
+- Landing Page 1
 - Landing Page 2 - Vide
