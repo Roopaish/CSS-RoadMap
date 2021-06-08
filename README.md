@@ -40,4 +40,4 @@
 - YouTube Clone
 - Price Comparison Table
 - Landing Page 1
-- Landing Page 2 - Vide
+- Landing Page 2 

@@ -43,6 +43,7 @@ article {
   border-radius: 12rem;
   border: 2rem solid rgb(0, 41, 102);
   width: 302rem;
+  box-shadow: 0 0 5px rgb(0, 41, 102);
 }
 
 .tag {
