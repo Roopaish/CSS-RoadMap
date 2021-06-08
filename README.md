@@ -24,7 +24,7 @@
 - Transparent Login Form [preview](https://roopaish.github.io/CSS-RoadMap/Transparent%20Login%20Form) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Transparent%20Login%20Form)
 - Responsive Video Background
 
-  2.Medium
+2.Medium
 
 - CSS Only Tooltips
 - CSS Emoji Art
@@ -35,7 +35,7 @@
 - 3D Flip Button
 - Animated Loading Spinner
 
-  3.Hard
+3.Hard
 
 - YouTube Clone
 - Price Comparison Table
