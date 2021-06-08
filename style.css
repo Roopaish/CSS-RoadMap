@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+html {
+  font-size: 1px;
+}
+
+body {
+  font-size: 18rem;
+  margin: auto;
+  padding: 10rem;
+  background-color: rgb(24, 26, 27);
+  color: white;
+  max-width: 1052rem;
+}
+
+header {
+  text-align: center;
+  font-size: 24rem;
+  font-weight: bolder;
+  margin-bottom: 50rem;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  margin: 20rem;
+  padding: 20rem 24rem;
+  border-radius: 12rem;
+  border: 2rem solid rgb(0, 41, 102);
+  width: 302rem;
+}
+
+.tag {
+  padding: 4rem 12rem;
+  line-height: 150%;
+  width: fit-content;
+  border-radius: 13rem;
+  font-size: 12rem;
+  color: rgb(155, 195, 116);
+  background-color: rgb(47, 74, 4);
+  margin-bottom: 10rem;
+}
+
+.title {
+  margin: 8rem 0rem 0rem;
+  margin-bottom: 10rem;
+}
+
+.title a{
+  color: white;
+  font-weight: bold;
+  line-height: 1.5;
+  font-size: 20rem;
+}
+
+.title:hover {
+  text-decoration: underline;
+}
+
+img {
+  width: 250rem;
+  height: 250rem;
+  object-fit: cover;
+  border-radius: 4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.code-link {
+  color: rgb(245, 245, 245, 0.5);
+  line-height: 1.5;
+  font-size: 16rem;
+  color: rgb(232, 94, 35);
+  cursor: pointer;
+  font-weight: normal;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  text-align: right;
+}
+
+.code-link:hover,
+.code-link:focus {
+  text-shadow: 0 0 10rem blue;
+  color: white;
+}
