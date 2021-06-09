@@ -2,7 +2,7 @@ const section = document.getElementById("projects")
 
 let projects = [
   { tag: "Easy", title: "Transparent Login Form", img: "tlf" },
-  { tag: "Easy", title: "TResponsive Video Background", img: "rvb" },
+  { tag: "Easy", title: "Responsive Video Background", img: "rvb" },
 ]
 
 projects.map((project) => {
