@@ -44,12 +44,15 @@ article {
   border: 2rem solid rgb(0, 41, 102);
   width: 302rem;
   box-shadow: 0 0 5px rgb(0, 41, 102);
+  /* for margin-top:auto to work at .bottom-align  */
+  display: flex;
+  flex-direction: column;
 }
 
 .tag {
   padding: 4rem 12rem;
   line-height: 150%;
-  width: fit-content;
+  width: max-content;
   border-radius: 13rem;
   font-size: 12rem;
   color: rgb(155, 195, 116);
@@ -101,4 +104,8 @@ a {
 .code-link:focus {
   text-shadow: 0 0 10rem blue;
   color: white;
+}
+
+.bottom-align{
+  margin-top: auto;
 }
