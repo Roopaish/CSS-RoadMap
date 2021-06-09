@@ -31,14 +31,14 @@ header {
 }
 
 section {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(302rem, max-content));
+  gap:40rem;
   justify-content: center;
-  align-items: center;
 }
 
 article {
-  margin: 20rem;
+  /* margin: 20rem; */
   padding: 20rem 24rem;
   border-radius: 12rem;
   border: 2rem solid rgb(0, 41, 102);
@@ -62,7 +62,7 @@ article {
   margin-bottom: 10rem;
 }
 
-.title a{
+.title a {
   color: white;
   font-weight: bold;
   line-height: 1.5;
