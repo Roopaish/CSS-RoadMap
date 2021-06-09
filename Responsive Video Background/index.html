@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Responsive Video Background</title>
+</head>
+
+<body>
+  <!-- playsinline and muted are required for ios even if the video doesn't have audio -->
+  <video autoplay playsinline muted loop id="myVideo">
+    <source src="loop.mp4" type="video/mp4">
+  </video>
+
+  <div class='music-card'>
+
+    <section class="music-info">
+
+      <section class='btns'>
+        <i class="fas fa-pause"></i>&nbsp;
+      </section>
+      <div class="artist">
+        rolifymusic
+      </div>
+      <div class="song">
+        Sound Of Silence
+      </div>
+      <span class="time">00:</span>
+      <div class="range">
+        <div class="slider"></div>
+      </div>
+
+    </section>
+
+    <section class="text">
+      Hello darkness, my old friend<br />
+      I've come to talk with you again<br />
+      Because a vision softly creeping<br />
+      Left its seeds while I was sleeping<br />
+    </section>
+
+  </div>
+
+</body>
+
+</html>

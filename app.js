@@ -1,8 +1,8 @@
 const section = document.getElementById("projects")
 
 let projects = [
-  { id: 1, tag: "Easy", title: "Transparent Login Form", img: "tlf" },
-  { id: 1, tag: "", title: "", img: "" },
+  { tag: "Easy", title: "Transparent Login Form", img: "tlf" },
+  { tag: "Easy", title: "TResponsive Video Background", img: "rvb" },
 ]
 
 projects.map((project) => {

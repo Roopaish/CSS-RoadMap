@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  user-select: none;
+}
+
+/* Using css variables to update time (animate)  */
+:root {
+  --time: "0";
+}
+
+html {
+  font-size: 1px;
+}
+
+/* Responsive video Background  */
+.video-wrapper{
+  position: absolute;
+  /* width: 100vw; */
+  height: 100vh;
+}
+video {
+  transform: rotate(180deg);
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+/* Additional Stuffs  */
+
+/* Styling Music-Info Card */
+.music-card{
+  width:100vw;
+  background-color: rgb(28, 27, 32,0.9);
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0 0 10rem rgb(82, 39, 146);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300rem, max-content));
+  justify-content: center;
+}
+
+.music-info {
+  width: min(95%, 300rem);
+  padding: 20rem;
+  position: relative;
+  border: 1rem solid rgb(82, 39, 146);
+}
+
+.btns {
+  font-size: 18rem;
+  margin-bottom: 10rem;
+  text-align: right;
+}
+
+.artist,
+.time {
+  color: rgb(174, 173, 178);
+  font-size: 14rem;
+}
+
+.time {
+  position: absolute;
+  right: 20rem;
+  margin:10rem 0;
+}
+
+/* Using pseudo class to update time using content and variable */
+.time::after {
+  content: var(--time);
+  font-size: 14rem;
+  animation: timer 10s linear infinite;
+}
+
+.song {
+  display: inline-block;
+  margin:10rem 0;
+  font-size: 18rem;
+  font-weight: 400;
+}
+
+.text{
+  color:rgb(255, 255, 255,0.7);
+  font-size: 17rem;
+  padding: 20rem;
+}
+
+/* Progress indicator  */
+.range {
+  background-color: black;
+  border: 1px inset solid black;
+  padding: 2rem;
+  box-shadow: inset 0 0 3rem grey;
+  height: 6rem;
+  width: 100%;
+  border-radius: 10rem;
+}
+
+.slider {
+  background-color: rgb(82, 39, 146);
+  border-radius: 10rem;
+  height: 2rem;
+  width: 60%;
+  animation: slider 10s linear infinite;
+}
+
+/* Animating width of slider */
+@keyframes slider {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Changing time's text  */
+@keyframes timer {
+  0% {
+    --time: "00";
+  }
+  10% {
+    --time: "01";
+  }
+  20% {
+    --time: "02";
+  }
+  30% {
+    --time: "03";
+  }
+  40% {
+    --time: "04";
+  }
+  50% {
+    --time: "05";
+  }
+  60% {
+    --time: "06";
+  }
+  70% {
+    --time: "07";
+  }
+  80% {
+    --time: "08";
+  }
+  90% {
+    --time: "09";
+  }
+  100% {
+    --time: "10";
+  }
+}
