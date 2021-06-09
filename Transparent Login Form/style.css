@@ -1,3 +1,4 @@
+/* Getting rid of default margin and padding */
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +7,13 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url("https://i.pinimg.com/originals/7a/7d/cf/7a7dcfa6474ec4cbfa81113eebe3c0dc.jpg");
-  color: white;
+  background-image: url("https://cdn.wallpapersafari.com/26/89/2t05m8.jpg");
+  background-size: cover;
+  color: rgb(255, 255, 255);
   overflow: hidden;
 }
 
+/* Setting default font-size to 1px ,So 1rem = 1px  */
 html {
   font-size: 1px;
 }
@@ -20,14 +23,12 @@ main {
   height: 100vh;
 }
 
-section {
-  background-color: rgb(46, 26, 86, 0.5);
-  backdrop-filter: blur(2rem);
-  margin: 0 auto;
-  padding: 20rem;
-  text-align: center;
-  font-size: 20rem;
-  border-radius: 5rem;
+/* Making top to bottom layout for main and form elements  */
+main,
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 form {
@@ -35,17 +36,17 @@ form {
   text-align: left;
 }
 
+/* Styling the card  */
 section {
+  /* To make background objects blurry  */
+  backdrop-filter: blur(4rem);
+  margin: 0 auto;
+  padding: 20rem;
+  text-align: center;
+  font-size: 20rem;
+  box-shadow: 0 0 10rem black;
+  /* width: 95% and max-width: 350rem */
   width: min(95%, 350rem);
-}
-
-main,
-form {
-  /* width: 95%;
-  max-width: 300rem; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 header {
@@ -58,17 +59,20 @@ label {
   margin-bottom: 5rem;
 }
 
+
 input {
   margin-bottom: 10rem;
   padding: 5rem;
   background-color: rgba(126, 16, 71, 0.2);
-  border: 1rem solid grey;
+  border: 1rem solid rgb(128, 128, 128,0.9);
   font-size: 16rem;
-  color: rgb(239, 201, 166);
+  color: rgb(7, 9, 25);
   border-radius: 3rem;
 }
 
 .submit-btn {
+  background-color: rgb(43, 63, 88,0.7);
+  color:white;
   padding: 6rem;
   margin-top: 22rem;
   cursor: pointer;
@@ -80,6 +84,9 @@ input:focus{
   outline: none;
   border-color: #9ecaed;
   box-shadow: 0 0 10px #9ecaed;
+}
+
+.submit-btn:focus{
   color: #9ecaed;
   text-shadow: 0 0 10px #9ecaed;
 }
@@ -89,4 +96,9 @@ input:focus{
   html {
     font-size: 1.2px;
   }
+  /* section{
+    position: absolute;
+    left:10%;
+    bottom: 10%;
+  } */
 }
