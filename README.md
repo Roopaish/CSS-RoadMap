@@ -1,46 +1,56 @@
 # CSS3 RoadMap
-* All projects [Live Preview](https://roopaish.github.io/* CSS-RoadMap/)
-* [Contents](#Contents)
-* [Projects](#Projects)
+
+- All projects [Live Preview](https://roopaish.github.io/* CSS-RoadMap/)
+- [Contents](#Contents)
+- [Projects](#Projects)
 
 ## Contents
 
 1. Selectors
 
 ```css
-element {
-}
-,
-.class-name {
-}
-,
-#id {
-}
+- element, .class-name, #id, element.className
+
+- [aria-hidden="true"] (selects elements with aria-hidden attribute with value true),
+
+- div.row * (all child elements of div of class row)
+
+- li > a (Only direct descendants, not all)
+
+- li + a (Only the first a after each li)
+
+- li, a (All a elements and all li elements)
+
+- li ~ a (a element following a li element)
 ```
 
-2. Cascade
+2. Cascading and Inheritance
 
 ```css
-
+- Last property is used for same element
+- id > className > element
+- inherit (Inherit parents property)
+- initial (Sets to initial value of that property)
+- unset (Resets the property to its natural value)
 ```
 
 3. Box Model
 
 ```css
-  content, padding, border, margin
+- content, padding, border, margin
 ```
 
 4. Position
 
 ```css
-  position: relative | absolute | fixed | sticky;
-  top, right, bottom, left
+- position: relative | absolute | fixed | sticky;
+- top, right, bottom, left
 ```
 
 5. Display
 
 ```css
-display: block | inline-block | inline | table | flex | grid;
+- display: block | inline-block | inline | table | flex | grid;
 ```
 
 6. Flexbox
@@ -81,25 +91,85 @@ width: calc(100%-20px);
 10. Pseudo Elements
 
 ```css
-
+- p::first-line, p::first-letter
+- p::after, p::before
+- ::marker(marker of all lists)
+- ::selection: color, background, cursor, and outline (on selecting text)
 ```
 
 11. Pseudo Classes
 
 ```css
+-	a:active	(Selects the active link)
+-	a:hover	(Selects links on mouse over)
+-	a:link	(Selects all unvisited links)
+-	a:visited	(Selects all visited links)
+
+-	input:checked	(Selects every checked <input> element)
+-	input:focus	(Selects the <input> element that has focus)
+-	input:disabled	(Selects every disabled <input> element)
+-	input:enabled	(Selects every enabled <input> element)
+
+-	input:in-range	(Selects <input> elements with a value within a specified range)
+-	input:out-of-range	(Selects <input> elements with a value outside a specified range)
+-	input:valid	(Selects all <input> elements with a valid value)
+-	input:invalid	(Selects all <input> elements with an invalid value)
+-	input:optional	(Selects <input> elements with no "required" attribute)
+
+-	input:read-only	(Selects <input> elements with a "readonly" attribute specified)
+-	input:read-write	(Selects <input> elements with no "readonly" attribute)
+-	input:required	(Selects <input> elements with a "required" attribute specified)
+
+-	p:empty	(Selects every <p> element that has no children)
+-	p:first-child	(Selects every <p> elements that is the first child of its parent)
+-	p:first-of-type	(Selects every <p> element that is the first <p> element of its parent)
+
+-	p:last-child	(Selects every <p> elements that is the last child of its parent)
+-	p:last-of-type	(Selects every <p> element that is the last <p> element of its parent)
+
+-	p:lang(it)	(Selects every <p> element with a lang attribute value starting with "it")
+
+-	:not(p)	(Selects every element that is not a <p> element)
+
+-	p:nth-child(2)	(Selects every <p> element that is the second child of its parent)
+-	p:nth-last-child(2)	(Selects every <p> element that is the second child of its parent, counting from the last child)
+-	p:nth-last-of-type(2)	(Selects every <p> element that is the second <p> element of its parent, counting from the last child)
+-	p:nth-of-type(2)	(Selects every <p> element that is the second <p> element of its parent)
+
+-	a:nth-childe(odd) (Selects all odd elements of a given type)
+-	a:nth-childe(even) (Selects all even elements of a given type)
+-	a:nth-childe(3n)  (Selects every 3rd anchor element)
+
+-	p:only-of-type	(Selects every <p> element that is the only <p> element of its parent)
+-	(p:only-child	Selects every <p> element that is the only child of its parent)
+
+
+-	:root	(Selects the document's root element)
+-	#news:target	(Selects the current active #news element )
 
 ```
 
 12. Custom Properties
 
 ```css
+-CSS variables 
 
+:root {
+  --background: "red";
+}
+element {
+  --main-bg-color: brown;
+}
+
+p {
+  background-color: var(--background);
+}
 ```
 
 13. Media Queries
 
 ```css
-@media (min-screen: 800px) {
+@media (min-screen: 800px and max-screen: 1024px) {
 }
 ```
 
@@ -108,29 +178,44 @@ width: calc(100%-20px);
 ```css
 transition: 0.2s ease-in-out alternate;
 animation: animationName 0.2s linear infinite;
+
+@keyframe animationName {
+  to {
+  }
+  from {
+  }
+}
+@keyframe animationName {
+  0% {
+  }
+  50% {
+  }
+  100% {
+  }
+}
 ```
 
 ### Projects
 
-1.Easy
+1. Easy
 
-- Transparent Login Form [preview](https://roopaish.github.io/CSS-RoadMap/Transparent%20Login%20Form) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Transparent%20Login%20Form)
-- Responsive Video Background [preview](https://roopaish.github.io/CSS-RoadMap/Responsive%20Video%20Background) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Responsive%20Video%20Background)
+   - Transparent Login Form [preview](https://roopaish.github.io/CSS-RoadMap/Transparent%20Login%20Form) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Transparent%20Login%20Form)
+   - Responsive Video Background [preview](https://roopaish.github.io/CSS-RoadMap/Responsive%20Video%20Background) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Responsive%20Video%20Background)
 
-  2.Medium
+2. Medium
 
-- CSS Only Tooltips
-- CSS Emoji Art
-- CSS Face Art
-- Advanced Hover Effects
-- Animated Page Load
-- Custom Checkbox Tutorial
-- 3D Flip Button
-- Animated Loading Spinner
+   - CSS Only Tooltips
+   - CSS Emoji Art
+   - CSS Face Art
+   - Advanced Hover Effects
+   - Animated Page Load
+   - Custom Checkbox Tutorial
+   - 3D Flip Button
+   - Animated Loading Spinner
 
-  3.Hard
+3. Hard
 
-- YouTube Clone
-- Price Comparison Table
-- Landing Page 1
-- Landing Page 2
+   - YouTube Clone
+   - Price Comparison Table
+   - Landing Page 1
+   - Landing Page 2
