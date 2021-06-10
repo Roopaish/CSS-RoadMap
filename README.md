@@ -1,6 +1,6 @@
 # CSS3 RoadMap
 
-- All projects [Live Preview](https://roopaish.github.io/* CSS-RoadMap/)
+- All projects [Live Preview](https://roopaish.github.io/CSS-RoadMap/)
 - [Contents](#Contents)
 - [Projects](#Projects)
 
@@ -152,9 +152,7 @@ width: calc(100%-20px);
 12. Custom Properties
 
 ```css
--CSS variables 
-
-:root {
+-CSS variables :root {
   --background: "red";
 }
 element {
@@ -169,8 +167,20 @@ p {
 13. Media Queries
 
 ```css
-@media (min-screen: 800px and max-screen: 1024px) {
+@media (min-width: 600px) {
+  html {
+    font-size: 1.2px;
+  }
 }
+
+@media not|only mediatype and (expressions) {
+  CSS-Code;
+}
+
+- meidatypes = all | screen | print | speech | orientation 
+
+/* When the width is between 600px and 900px OR above 1100px - change the appearance of <div> */
+@media screen and (max-width: 900px) and (min-width: 600px), (min-width: 1100px) {}
 ```
 
 14. Animations
