@@ -21,6 +21,7 @@ body {
   background-color: rgb(24, 26, 27);
   color: white;
   max-width: 1052rem;
+  user-select: none;
 }
 
 header {

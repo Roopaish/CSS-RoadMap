@@ -11,11 +11,16 @@ body {
   background-color: black;
   color: white;
   padding: 20px;
+  user-select: none;
 }
 
 /* Header  */
 header {
   font-size: 20px;
+  /* background: repeating-radial-gradient(red, red 10%, white 10%, white 20%);
+  width:max-content;
+  -webkit-background-clip:text;
+  background-clip:text; */
 }
 
 /* main section  */
@@ -48,8 +53,8 @@ img {
 .tool-tip::before {
   --scale: 0;
   --arrow-size: 10px;
-  --color:#0000ff;
-  --bg-color:#00ffff;
+  --color: #0000ff;
+  --bg-color: yellow;
 
   position: absolute;
   top: -20px;
@@ -99,17 +104,33 @@ img {
 }
 
 .tool-tip:nth-child(2)::before,
-.tool-tip:nth-child(2):after{
-  --bg-color:transparent;
-  --color:white;
-  border:1px solid white;
+.tool-tip:nth-child(2):after {
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  --bg-color: green;
+  --color: white;
 }
 
 .tool-tip:nth-child(3)::before,
-.tool-tip:nth-child(3)::after{
-  --bg-color:transparent;
-  --color:white;
-  border:1px dashed white;
+.tool-tip:nth-child(3)::after {
+  background: repeating-linear-gradient(
+    -45deg,
+    yellow,
+    yellow 10%,
+    black 10%,
+    black 20%
+  );
+  --bg-color: yellow;
+  --color: red;
+  text-shadow: 0 1px 0 green;
 }
 
 /* ------------Play gif on hover------------ */
