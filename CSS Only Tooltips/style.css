@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+/* Header  */
+header {
+  font-size: 20px;
+}
+
+/* main section  */
+main {
+  height: max-content;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
+  gap: 40px;
+  justify-content: center;
+}
+
+/* Images section  */
+section {
+  margin-top: 150px;
+  position: relative;
+  cursor: pointer;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ------------Tooltips------------ */
+
+/* Using PseudoElements for tooltip  */
+.tool-tip::after,
+.tool-tip::before {
+  --scale: 0;
+  --arrow-size: 10px;
+  --color:#0000ff;
+  --bg-color:#00ffff;
+
+  position: absolute;
+  top: -20px;
+  /* Aligning to center  */
+  /* Shifting to left by 50% of its parent(section) width   */
+  left: 50%;
+
+  /* Shifting to left by 50% of its own width */
+  /* And top by --translate-y variable which if not exist will use 0%, of its own height  */
+  transform: translateX(-50%) translateY(var(--translate-y, 0))
+    scale(var(--scale));
+  transition: 0.1s transform;
+  transform-origin: bottom center;
+}
+
+/* Tooltip text  */
+.tool-tip::before {
+  --translate-y: calc(-100% - var(--arrow-size));
+
+  background-color: var(--bg-color);
+  padding: 20px;
+  color: var(--color);
+  font-size: 18px;
+  font-weight: 400;
+  content: attr(data-tooltip);
+  text-align: center;
+
+  border-radius: 5px;
+  width: max-content;
+  /* To wrap contents if they become bigger than parent*/
+  max-width: 100%;
+}
+
+/* Tooltip arrow  */
+.tool-tip::after {
+  --translate-y: calc(-1 * var(--arrow-size));
+
+  content: "";
+  border: var(--arrow-size) solid transparent;
+  border-top-color: var(--bg-color);
+  transform-origin: top center;
+}
+
+.tool-tip:hover::before,
+.tool-tip:hover::after {
+  --scale: 1;
+}
+
+.tool-tip:nth-child(2)::before,
+.tool-tip:nth-child(2):after{
+  --bg-color:transparent;
+  --color:white;
+  border:1px solid white;
+}
+
+.tool-tip:nth-child(3)::before,
+.tool-tip:nth-child(3)::after{
+  --bg-color:transparent;
+  --color:white;
+  border:1px dashed white;
+}
+
+/* ------------Play gif on hover------------ */
+
+/* Hiding the gif behind static image  */
+.static {
+  position: absolute;
+}
+
+/* Hiding static image to reveal gif underneath  */
+.static:hover {
+  opacity: 0;
+}

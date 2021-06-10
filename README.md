@@ -217,7 +217,8 @@ animation: animationName 0.2s linear infinite;
 
 2. Medium
 
-   - CSS Only Tooltips
+   - CSS Only Tooltips [preview](https://roopaish.github.io/CSS-RoadMap/CSS%20Only%20Tooltips/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/CSS%20Only%20Tooltips/)
+     <br> <img src='img/ctt.png' ><br><br>
    - CSS Emoji Art
    - CSS Face Art
    - Advanced Hover Effects

@@ -3,6 +3,7 @@ const section = document.getElementById("projects")
 let projects = [
   { tag: "Easy", title: "Transparent Login Form", img: "tlf" },
   { tag: "Easy", title: "Responsive Video Background", img: "rvb" },
+  { tag: "Medium", title: "CSS Only Tooltips", img: "ctt" },
 ]
 
 projects.map((project) => {
