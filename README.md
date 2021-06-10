@@ -177,7 +177,7 @@ p {
   CSS-Code;
 }
 
-- meidatypes = all | screen | print | speech | orientation 
+- meidatypes = all | screen | print | speech | orientation
 
 /* When the width is between 600px and 900px OR above 1100px - change the appearance of <div> */
 @media screen and (max-width: 900px) and (min-width: 600px), (min-width: 1100px) {}
@@ -209,8 +209,10 @@ animation: animationName 0.2s linear infinite;
 
 1. Easy
 
-   - Transparent Login Form [preview](https://roopaish.github.io/CSS-RoadMap/Transparent%20Login%20Form) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Transparent%20Login%20Form)
+   - Transparent Login Form [preview](https://roopaish.github.io/CSS-RoadMap/Transparent%20Login%20Form) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Transparent%20Login%20Form) 
+   <br><img src='img/tlf.png' width=250 height=250 style='object-fit:cover'><br><br>
    - Responsive Video Background [preview](https://roopaish.github.io/CSS-RoadMap/Responsive%20Video%20Background) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Responsive%20Video%20Background)
+    <br> <img src='img/rvb.png' width=250 height=250 style='object-fit:cover'><br><br>
 
 2. Medium
 
