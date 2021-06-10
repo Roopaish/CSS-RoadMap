@@ -20,11 +20,6 @@ html {
 }
 
 /* Responsive video Background  */
-.video-wrapper{
-  position: absolute;
-  /* width: 100vw; */
-  height: 100vh;
-}
 video {
   transform: rotate(180deg);
   z-index: -1;
@@ -51,10 +46,10 @@ video {
 }
 
 .music-info {
-  width: min(95%, 300rem);
   padding: 20rem;
   position: relative;
-  border: 1rem solid rgb(82, 39, 146);
+  border-right: 1rem solid rgb(82, 39, 146);
+  border-bottom: 1rem solid rgb(82, 39, 146);
 }
 
 .btns {
@@ -158,5 +153,12 @@ video {
   }
   100% {
     --time: "10";
+  }
+}
+
+@media (max-width: 600px) {
+  .music-card{
+    /* grid-template-columns: repeat(auto-fit, minmax(300rem, 100vw)); */
+    grid-template-columns: repeat(1, 1fr);
   }
 }
