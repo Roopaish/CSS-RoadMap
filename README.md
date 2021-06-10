@@ -209,10 +209,10 @@ animation: animationName 0.2s linear infinite;
 
 1. Easy
 
-   - Transparent Login Form [preview](https://roopaish.github.io/CSS-RoadMap/Transparent%20Login%20Form) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Transparent%20Login%20Form) 
-   <br><img src='img/tlf.png' width=250 height=250 style='object-fit:cover'><br><br>
+   - Transparent Login Form [preview](https://roopaish.github.io/CSS-RoadMap/Transparent%20Login%20Form) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Transparent%20Login%20Form)
+     <br><img src='img/tlf.png' ><br><br>
    - Responsive Video Background [preview](https://roopaish.github.io/CSS-RoadMap/Responsive%20Video%20Background) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Responsive%20Video%20Background)
-    <br> <img src='img/rvb.png' width=250 height=250 style='object-fit:cover'><br><br>
+     <br> <img src='img/rvb.png' ><br><br>
 
 2. Medium
 
