@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: seagreen;
+  color: white;
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+header {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+main {
+  margin-top: 100px;
+  height: max-content;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
+  gap: 80px;
+  justify-content: center;
+}
+
+.refrence {
+  font-size: 180px;
+}
+
+/* 😀 */
+.😀,
+.😷 {
+  width: 200px;
+  height: 200px;
+  background: rgb(255, 200, 61);
+  border-radius: 50%;
+  border: 10px solid black;
+  /* clip-path: circle(30% at 50% 50%); */
+  position: relative;
+  overflow: hidden;
+}
+
+.smile-leye,
+.smile-reye {
+  width: 18px;
+  height: 32px;
+  background: black;
+  border-radius: 45%;
+
+  position: absolute;
+  top: 30%;
+}
+
+.smile-leye {
+  left: 25%;
+}
+
+.smile-reye {
+  right: 25%;
+}
+
+.mouth {
+  --mouth-height: 50px;
+
+  width: 60%;
+  height: var(--mouth-height);
+  background-color: black;
+  border: 5px solid black;
+  border-radius: 5% 5% var(--mouth-height) var(--mouth-height);
+
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  overflow: hidden;
+}
+
+.teeth {
+  height: 10px;
+  width: 100%;
+  background-color: white;
+
+  position: absolute;
+  top: -1px;
+
+  border-radius: 5% 5% 5px 5px;
+}
+
+.tongue {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(240, 58, 23);
+  border-radius: 50%;
+
+  position: absolute;
+  bottom: -90%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 😷 */
+.curved-leye,
+.curved-reye {
+  width: 25%;
+  height: 25px;
+  background-color: transparent;
+
+  border: 10px solid black;
+  border-width: 0 6px 8px 6px;
+
+  border-radius: 10px 10px 40px 40px;
+
+  position: absolute;
+  top: 30%;
+}
+
+.curved-leye {
+  left: 20%;
+}
+
+.curved-reye {
+  right: 20%;
+}
+
+.mask {
+  width: 60%;
+  height: 40%;
+  background-color: white;
+  border-radius: 20px;
+  bottom: 40px;
+
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.strap {
+  width: 70%;
+  height: 18%;
+  position: absolute;
+  background-color: white;
+}
+
+.strap1 {
+  transform: rotate(25deg);
+  right: 90%;
+  top: -10%;
+}
+
+.strap2 {
+  transform: rotate(-25deg);
+  left: 90%;
+  top: -10%;
+}
+
+.strap3 {
+  bottom: 30%;
+  right: 90%;
+}
+
+.strap4 {
+  bottom: 30%;
+  left: 90%;
+}
+
+.drop {
+  width:20px;
+  height: 40px;
+  position: absolute;
+  top: 5%;
+  right: 30%;
+}
+.drop::before,
+.drop::after {
+  content: "";
+  position: absolute;
+}
+
+.drop::before {
+  border:10px solid transparent;
+  bottom: 31px;
+  border-bottom-color: rgb(0, 188, 242);
+  transform:scaleY(3);
+}
+
+.drop::after {
+  width:20px;
+  height: 20px;
+  background-color: rgb(0, 188, 242);
+  border-radius: 50%;
+  top: 20px;
+}
+
+/* 🌟 */
+.🌟 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.lines{
+  position: absolute;
+  width:100%;
+  height:100%;
+  top:15%;
+  left:5%;
+}
+
+.line{
+  height:25px;
+  width:50%;
+  background-color: aqua;
+  border: 10px solid black;
+  border-radius: 15px;
+  position: absolute;
+}
+
+.line1{
+  transform: rotate(45deg);
+}
+
+.line2{
+  transform: rotate(-45deg);
+  left:50%;
+}
+
+.line3{
+  transform: rotate(-30deg);
+  bottom:50%;
+}
+
+.line4{
+  transform: rotate(30deg);
+  bottom:50%;
+  left:50%;
+}
+
+.star {
+  --color:#FC0;
+  position: absolute;
+  
+  display: inline-block;
+  width: 0;
+  height: 0;
+  
+  margin-left: .9em;
+  margin-right: .9em;
+  margin-bottom: 1.2em;
+  
+  border-right:  .3em solid transparent;
+  border-bottom: .7em  solid var(--color);
+  border-left:   .3em solid transparent;
+
+  /* Controls the size of the stars. */
+  font-size: 70px;
+}
+
+.star:before, .star:after {
+  content: '';
+  
+  display: block;
+  width: 0;
+  height: 0;
+  
+  position: absolute;
+  top: .6em;
+  left: -1em;
+
+  border-right:  1em solid transparent;
+  border-bottom: .7em  solid var(--color);
+  border-left:   1em solid transparent;
+
+  transform: rotate(-35deg);
+}
+
+.star:after {  
+  transform: rotate(35deg);
+}
+
+.star.shape{
+  right:9px;
+  top:20px;
+}
+
+.star.border{
+  --color:black;
+  font-size: 90px;
+  left:0;
+}
