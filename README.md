@@ -219,7 +219,8 @@ animation: animationName 0.2s linear infinite;
 
    - CSS Only Tooltips [preview](https://roopaish.github.io/CSS-RoadMap/CSS%20Only%20Tooltips/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/CSS%20Only%20Tooltips/)
      <br> <img src='img/ctt.png' ><br><br>
-   - CSS Emoji Art
+   - CSS Emoji Art [preview](https://roopaish.github.io/CSS-RoadMap/CSS%20Only%20Emoji%20Art/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/CSS%20Only%20Emoji%20Art)
+   <br> <img src='img/coea.png' ><br><br>
    - CSS Face Art
    - Advanced Hover Effects
    - Animated Page Load
