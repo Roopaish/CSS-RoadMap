@@ -220,10 +220,11 @@ animation: animationName 0.2s linear infinite;
    - CSS Only Tooltips [preview](https://roopaish.github.io/CSS-RoadMap/CSS%20Only%20Tooltips/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/CSS%20Only%20Tooltips/)
      <br> <img src='img/ctt.png' ><br><br>
    - CSS Emoji Art [preview](https://roopaish.github.io/CSS-RoadMap/CSS%20Only%20Emoji%20Art/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/CSS%20Only%20Emoji%20Art)
-   <br> <img src='img/coea.png' ><br><br>
-   - CSS Face Art [preview](https://roopaish.github.io/CSS-RoadMap/CSS%20Face%20Art/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/CSS%20Face%20Art/t)
-   <br> <img src='img/cfa.png' ><br><br>
-   - Advanced Hover Effects
+     <br> <img src='img/coea.png' ><br><br>
+   - CSS Face Art [preview](https://roopaish.github.io/CSS-RoadMap/CSS%20Face%20Art/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/CSS%20Face%20Art/)
+     <br> <img src='img/cfa.png' ><br><br>
+   - Advanced Hover Effects [preview](https://roopaish.github.io/CSS-RoadMap/Advanced%20Hover%20Effects/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Advanced%20Hover%20Effects)
+     <br> <img src='img/ahe.png' ><br><br>
    - Animated Page Load
    - Custom Checkbox Tutorial
    - 3D Flip Button

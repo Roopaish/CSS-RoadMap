@@ -6,6 +6,7 @@ let projects = [
   { tag: "Medium", title: "CSS Only Tooltips", img: "ctt" },
   { tag: "Medium", title: "CSS Only Emoji Art", img: "coea" },
   { tag: "Medium", title: "CSS Face Art", img: "cfa" },
+  { tag: "Medium", title: "Advanced Hover Effects", img: "ahe" },
 ]
 
 projects.map((project) => {

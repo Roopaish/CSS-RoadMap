@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(44, 62, 80);
+  color: white;
+  margin: auto;
+  padding: 20px;
+
+  max-width: 1337px;
+}
+
+header {
+  font-size: 25px;
+  font-weight: bold;
+  position: relative;
+}
+
+/* Header Hover */
+header::after{
+  content: '';
+  width:11.5em;
+  height: .1em;
+
+  background-color: white;
+  position: absolute;
+  bottom:0;
+  left:0;
+
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out;
+}
+
+header:hover::after{
+  transform: scaleX(1);
+}
+
+main {
+  margin-top: 100px;
+  height: max-content;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
+  gap: 80px;
+  justify-content: center;
+}
+
+section {
+  width: 200px;
+}
+
+/* All Buttons Common Property */
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 20px 60px;
+
+  --font-size: 20px;
+  font-size: var(--font-size);
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+button::after,
+button::before {
+  transition: all 0.2s ease-in-out;
+}
+
+:root {
+  --btn1-a: hsl(6, 100%, 57%);
+  --btn1-b: hsl(5, 100%, 57%);
+
+  --btn2-a: hsl(168, 100%, 42%);
+  --btn2-b: hsl(173, 100%, 34%);
+
+  --btn3-a: hsl(204, 100%, 53%);
+
+  --btn4-a: hsl(50, 100%, 41%);
+  --btn4-b: hsl(48, 100%, 54%);
+
+  --btn5-a: hsl(286, 100%, 45%);
+  --btn5-b: hsl(282, 100%, 47%);
+
+  --btn6-a: hsl(145, 100%, 49%);
+  --btn6-b: hsla(195, 100%, 50%, 0.4);
+  --btn6-c: hsla(202, 100%, 50%, 0.4);
+
+  --btn7-a: hsl(315, 100%, 50%);
+
+  --btn8-a: #ff0081;
+  --btn8-b: rgba(233, 30, 99, 0.5);
+}
+
+/* Button1  */
+.btn1 {
+  background-color: var(--btn1-b);
+  border: 4px solid var(--btn1-a);
+  color: var(--btn1-b);
+  overflow: hidden;
+
+  /* So that before element goes only behind the text, not the background color  */
+  z-index: 1;
+}
+
+.btn1::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(44, 62, 80);
+
+  z-index: -1;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(1.5);
+}
+
+.btn1:hover {
+  color: white;
+}
+
+.btn1:hover::before {
+  transform: scale(0);
+}
+
+/* Button2  */
+.btn2 {
+  border: 4px solid var(--btn2-a);
+  border-radius: calc(2 * 20px + var(--font-size));
+
+  background: repeating-linear-gradient(
+    90deg,
+    var(--btn2-a),
+    var(--btn2-a) 10px,
+    var(--btn2-b) 10px,
+    var(--btn2-b) 20px
+  );
+}
+
+.btn2:hover {
+  background-position: 50px;
+}
+
+/* Button3  */
+.btn3 {
+  background-color: var(--btn3-a);
+  border: 2px solid var(--btn3-a);
+}
+
+.btn3:hover {
+  background-color: transparent;
+  border: 2px solid var(--btn3-a);
+
+  box-shadow: 0 0 15px var(--btn3-a), inset 0 0 10px var(--btn3-a);
+}
+
+/* Button4 */
+.btn4 {
+  background-color: transparent;
+  border: 4px solid var(--btn4-a);
+  overflow: hidden;
+}
+
+.btn4::before {
+  content: "";
+  width: 100%;
+  height: 500%;
+  background-color: var(--btn4-b);
+
+  z-index: -1;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(45deg) translate(-90px, 170px);
+}
+
+.btn4:hover {
+  border: 4px solid var(--btn4-b);
+}
+
+.btn4:hover::before {
+  transform: rotate(45deg) translate(-90px, -100px);
+}
+
+/* Button5 */
+.btn5 {
+  background-color: transparent;
+  border: 4px solid var(--btn5-a);
+  /* overflow: hidden; */
+}
+
+.btn5::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--btn5-b);
+
+  z-index: -1;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+}
+
+.btn5:hover {
+  border: 4px solid var(--btn5-b);
+}
+
+.btn5:hover::before {
+  transform: scaleX(1);
+}
+
+/* Button6 */
+.btn6 {
+  border: 4px solid var(--btn6-a);
+  border-radius: calc(2 * 20px + var(--font-size));
+
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.btn6::after,
+.btn6::before {
+  content: "";
+  width: 300%;
+  height: 900%;
+
+  position: absolute;
+  left: -100%;
+
+  z-index: -1;
+  transform: rotate(90deg);
+  transition: all 5s ease-in-out;
+}
+
+.btn6::after {
+  top: 90%;
+  background-color: var(--btn6-b);
+  border-radius: 43%;
+}
+.btn6::before {
+  top: 100%;
+  background-color: var(--btn6-c);
+  border-radius: 40%;
+}
+
+.btn6:hover::before {
+  animation: rotate 5s linear infinite;
+}
+.btn6:hover::after {
+  animation: rotate 7s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Button7  */
+.btn7 {
+  background-color: var(--btn7-a);
+
+  box-shadow: 20px 20px 0 black;
+}
+
+.btn7:hover {
+  box-shadow: 10px 10px 0 black;
+}
+
+/* Button8  */
+.btn8 {
+  background-color: var(--btn8-a);
+  box-shadow: 0 2px 25px var(--btn8-b);
+}
+
+.btn8::before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  left: -2em;
+  right: -2em;
+  top: -2em;
+  bottom: -2em;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, white 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ff0081 20%, transparent 20%),
+    /*  */
+      radial-gradient(circle, transparent 10%, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, white 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, white 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%, 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%,
+    20% 20%;
+  background-position: 18% 40%, 20% 31%, 30% 30%, 40% 30%, 50% 30%, 57% 30%,
+    65% 30%, 80% 32%, 15% 60%, 83% 60%, 18% 70%, 25% 70%, 41% 70%, 50% 70%,
+    64% 70%, 80% 71%;
+}
+.btn8:hover::before {
+  background-position: 5% 44%, -5% 20%, 7% 5%, 23% 0%, 37% 0, 58% -2%, 80% 0%,
+    100% -2%, -5% 80%, 100% 55%, 2% 100%, 23% 100%, 42% 100%, 60% 95%, 70% 96%,
+    100% 100%;
+  background-size: 0% 0%;
+  transition: background-position 0.5s ease-in-out,
+    background-size 0.75s ease-in-out;
+}
