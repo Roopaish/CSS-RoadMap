@@ -1,0 +1,249 @@
+*{
+  margin : 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(3, 3, 3);
+  color: white;
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+header{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+main{
+  min-height: 400px;
+  height: max-content;
+}
+
+main,.face,.head,.head > *{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:root{
+  --skin:rgb(161, 126, 146);
+  --shades: rgb(94, 68, 77);
+  --black:rgb(34, 27, 44);
+  --white:rgb(228, 222, 227);
+
+  --border:rgb(40, 40, 63);
+  --eyes:rgb(87, 60, 55);
+}
+
+.face{
+  width:300px;
+  height: 300px;
+}
+
+.head{
+  background-color: var(--skin);
+  height: 225px;
+  width: 200px;
+  border-radius: 50% 50% 100% 100%;
+  
+  cursor: pointer;
+}
+
+.head > * {
+  position: absolute;
+}
+
+.eyebrows{
+  width:calc(3*45px);
+  margin-bottom:40px;
+  justify-content: space-between;
+}
+
+.eyebrow{
+  width:55px;
+  height:8px;
+  background-color: var(--black);
+  margin-bottom: 30px;
+  border-radius: 10px 0;
+}
+
+.eyebrow:first-child{
+  transform: rotate(10deg);
+}
+
+.eyebrow:last-child{
+  transform: rotate(-10deg);
+}
+
+.eyes{
+  width:calc(3*45px);
+  margin-bottom:40px;
+  justify-content: space-between;
+}
+
+.eye{
+  width: 45px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--white);
+
+  border-top:1px solid var(--shades);
+  border-bottom:2px solid var(--shades);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.eye::after,.eye:before{
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.eye::before{
+  width:16px;
+  height: 16px;
+  background-color: var(--eyes);
+  box-shadow:inset 0 0 3px var(--border);
+
+  top:-1px;
+  left:40%;
+}
+
+.eye::after{
+  width:6px;
+  height: 6px;
+  background-color: var(--black);
+  /* box-shadow:inset 0 0 3px var(--border); */
+  top:30%;
+  left:53%;
+}
+
+.ears{
+  width:calc(5*45px);
+  height:50px;
+
+  margin-bottom:40px;
+  justify-content: space-between;
+}
+
+.ear{
+  width: 15px;
+  height: 100%;
+  background-color:var(--skin);
+  border-top:1px solid var(--shades);
+  border-bottom:2px solid var(--shades);
+}
+
+.ear:first-child{
+  border-radius: 10px 10px 0 100%;
+}
+
+.ear:last-child{
+  border-radius: 10px 10px 100% 0;
+}
+
+.nose{
+  width:40px;
+  height:45px;
+  border:2px solid var(--shades);
+  
+  border-top-width: 0;
+  border-radius:45px 45px 45px 45px / 90px 90px 45px 45px;
+ 
+  margin-top:30px;
+}
+
+.mouth{
+  width:80px;
+  height: 70px;
+  margin-top:155px;
+  border-radius: 50% 50% 100% 100%;
+
+  overflow: hidden;
+}
+
+.beard{
+  position: absolute;
+  width:80%;
+  height: 30px;
+  margin-bottom:20px;
+  border:10px solid var(--black);
+
+  border-width:10px 5px 0 5px;
+  border-radius: 50% 50% 100% 100%;
+}
+
+.lips{
+  position: absolute;
+  width: 80%;
+  height: 20px;
+  margin-bottom:15px;
+  border:10px solid var(--eyes);
+
+  border-width:10px 5px 0 5px;
+  border-radius: 50% 50% 100% 100%;
+}
+
+.hair{
+  width:200px;
+  height: 70px;
+  background-color: var(--black);
+  margin-bottom: 250px;
+
+  border-radius: 50% 100% 10% 10%;
+}
+
+.hair-straps{
+  width:200px;
+  height: 50px;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+.hair-strap{
+  width:10px;
+  height: 50px;
+  margin-bottom: 100px;
+  background-color: var(--black);
+}
+
+.hair-strap:first-child{
+  border-radius: 0 0 100% 10%;
+}
+
+.hair-strap:last-child{
+  border-radius: 0 0 10% 100%;
+}
+
+.hair-strap::after{
+  content: '';
+  width:20px;
+  height: 10px;
+
+  background-color: var(--black);
+  position: absolute;
+  transform: translateY(5px) rotate(-45deg);
+}
+
+.hair-strap:last-child::after{
+  margin-top: 7px;
+  margin-left: 2px;
+  transform: translateX(-15px) rotate(45deg);
+}
+
+/* Animation  */
+.head:hover .eyebrows .eyebrow:last-child{
+  transition: all .6s linear;
+  margin-bottom:50px;
+  transform: rotate(-15deg);
+}
+
+.head:hover .eyes .eye:last-child{
+  transition: all .6s linear;
+  height: 18px;
+}

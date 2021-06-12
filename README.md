@@ -221,7 +221,8 @@ animation: animationName 0.2s linear infinite;
      <br> <img src='img/ctt.png' ><br><br>
    - CSS Emoji Art [preview](https://roopaish.github.io/CSS-RoadMap/CSS%20Only%20Emoji%20Art/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/CSS%20Only%20Emoji%20Art)
    <br> <img src='img/coea.png' ><br><br>
-   - CSS Face Art
+   - CSS Face Art [preview](https://roopaish.github.io/CSS-RoadMap/CSS%20Face%20Art/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/CSS%20Face%20Art/t)
+   <br> <img src='img/cfa.png' ><br><br>
    - Advanced Hover Effects
    - Animated Page Load
    - Custom Checkbox Tutorial
