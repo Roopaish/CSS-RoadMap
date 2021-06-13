@@ -140,14 +140,17 @@ p {
 .fakeimg {
   height: 200px;
   width: 200px;
-  /* background: darkgray; */
-  box-shadow: inset 0 0 5px hsl(0, 100%, 50%, 0.1);;
-  background: linear-gradient(to right, hsl(0, 0%, 93%,0.7) 10%, hsl(0, 0%, 87%,0.7) 18%, hsl(0, 0%, 93%,0.7) 33%);
-  background-size: 800px 104px;
-  
+  box-shadow: inset 2px 2px 5px hsl(0, 100%, 50%, 0.1);
 
   position: relative;
   overflow: hidden;
+}
+
+.fakeimg::after{
+  content: '';
+  width: 800px;
+  height: 200px;
+  background: linear-gradient(to right, hsl(0, 0%, 93%,0.7) 30%, hsl(0, 0%, 87%,0.7) 38%, hsl(0, 0%, 93%,0.7) 63%);
 
   animation: 1.25s imgload linear infinite forwards;
   /* animation-name:imgload ;
@@ -155,15 +158,19 @@ p {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards; */
+
+  position: absolute;
+  top:0;
+  left:-50%;
 }
 
 
 @keyframes imgload {
   0% {
-    background-position: -468px 0;
+    transform: translateX(-50%);
   }
   100% {
-    background-position: 468px 0;
+    transform: translateX(10%);
   }
 }
 
