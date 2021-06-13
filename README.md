@@ -223,9 +223,10 @@ animation: animationName 0.2s linear infinite;
      <br> <img src='img/coea.png' ><br><br>
    - CSS Face Art [preview](https://roopaish.github.io/CSS-RoadMap/CSS%20Face%20Art/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/CSS%20Face%20Art/)
      <br> <img src='img/cfa.png' ><br><br>
-   - Advanced Hover Effects [preview](https://roopaish.github.io/CSS-RoadMap/Advanced%20Hover%20Effects/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Advanced%20Hover%20Effects)
+   - Advanced Hover Effects [preview](https://roopaish.github.io/CSS-RoadMap/Advanced%20Hover%20Effects/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Advanced%20Hover%20Effects/)
      <br> <img src='img/ahe.png' ><br><br>
-   - Animated Page Load
+   - Animated Page Load [preview](https://roopaish.github.io/CSS-RoadMap/Animated%20Page%20Load/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Animated%20Page%20Load/)
+     <br> <img src='img/apl.png' ><br><br>
    - Custom Checkbox Tutorial
    - 3D Flip Button
    - Animated Loading Spinner
