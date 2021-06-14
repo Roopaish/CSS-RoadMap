@@ -1,0 +1,276 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: hsl(225, 17%, 23%);
+
+  --text-bg: hsl(7, 99%, 63%);
+
+  --c1: hsl(146, 68%, 47%);
+  --c1a: hsl(146, 68%, 47%, 0.3);
+  --c1b: hsl(146, 68%, 47%, 0.5);
+
+  --c2: hsl(7, 99%, 63%);
+  --c2a: hsl(7, 99%, 63%, 0.3);
+  --c2b: hsl(7, 99%, 63%, 0.5);
+
+  --c3: hsl(38, 100%, 52%);
+  --c3a: hsl(38, 100%, 52%, 0.3);
+  --c3b: hsl(38, 100%, 52%, 0.5);
+
+  --c4: hsl(173, 68%, 43%);
+  --c4a: hsl(173, 68%, 43%, 0.3);
+  --c4b: hsl(173, 68%, 43%, 0.5);
+
+  --c5: hsl(282, 40%, 53%);
+  --c5a: hsla(282, 40%, 53%, 0.3);
+  --c5b: hsla(282, 40%, 53%, 0.5);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: white;
+  margin: auto;
+  padding: 18px;
+  max-width: 1240px;
+}
+
+header {
+  /* background-color: var(--text-bg); */
+  width: max-content;
+  padding: 10px;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.849);
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+main {
+  margin-top: 100px;
+  height: max-content;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+  gap: 80px;
+  justify-content: center;
+}
+
+section {
+  width: max-content;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+input {
+  margin: 10px;
+}
+
+label {
+  --idleC: white;
+  --hoverC: white;
+  --tickC: white;
+
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 50px;
+  margin-bottom: 5px;
+  position: relative;
+  user-select: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+/* Box  */
+label::before,
+label::after {
+  content: "";
+  width: 1em;
+  height: 1em;
+  background-color: var(--idleC);
+
+  position: absolute;
+  left: -1.5em;
+
+  cursor: pointer;
+}
+
+/* Tick  */
+label::after {
+  display: none;
+  background-color: transparent;
+  width: 0.5em;
+  height: 0.8em;
+  left: -1.25em;
+  border-color: wheat;
+  border-style: solid;
+  border-width: 0 0.2em 0.2em 0;
+
+  transform: rotate(45deg);
+}
+
+label:hover::before {
+  background-color: var(--hoverC);
+}
+
+/* Select only first label before input  */
+input:checked + label::after {
+  display: inline-block;
+}
+
+input:checked + label::before {
+  background-color: var(--tickC);
+}
+
+input:disabled + label {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+
+/* Checkbox1 */
+.checkbox1 {
+  --idleC: var(--c1a);
+  --hoverC: var(--c1b);
+  --tickC: var(--c1);
+}
+
+/* Checkbox2 */
+.checkbox2 {
+  --idleC: var(--c2a);
+  --hoverC: var(--c2b);
+  --tickC: var(--c2);
+}
+
+.checkbox2::before {
+  border-radius: 50%;
+}
+
+.checkbox2::after {
+  display: inline-block;
+  transform: rotate(45deg) scale(0);
+  transition: transform 0.2s linear;
+}
+
+input:checked + .checkbox2::after {
+  transform: rotate(45deg) scale(1);
+}
+
+/* Checkbox3 */
+.checkbox3 {
+  --idleC: var(--c3a);
+  --hoverC: var(--c3b);
+  --tickC: var(--c3);
+}
+
+input:checked + .checkbox3::after {
+  display: inline-block;
+  transform-origin: top left;
+  left: -0.9em;
+  animation: rotate .4s ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    opacity: 0.5;
+    transform: rotate(0deg) scale(0, 0);
+  }
+  20% {
+    transform: rotate(81deg) scale(0.2, 0.2);
+  }
+  40% {
+    transform: rotate(162deg) scale(0.4, 0.4);
+  }
+  60% {
+    transform: rotate(243deg) scale(0.6, 0.6);
+  }
+  80% {
+    transform: rotate(324deg) scale(0.8, 0.8);
+  }
+  100% {
+    transform: rotate(405deg) scale(1, 1);
+  }
+}
+
+/* Radio1 */
+.radio1 {
+  --idleC: var(--c4a);
+  --hoverC: var(--c4b);
+  --tickC: var(--c4);
+}
+
+input:checked + .radio1::after {
+  display: inline-block;
+  transform-origin: top left;
+  left: -0.9em;
+  animation: slide 0.2s ease-in-out;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-0.5em, 0.5em);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(45deg) translate(0em, 0em);
+  }
+}
+
+/* Radio2 */
+.radio2 {
+  --idleC: var(--c5);
+  --hoverC: var(--c5b);
+  --tickC: var(--c5a);
+
+  font-size: 18px;
+}
+
+.radio2::before {
+  width: 2em;
+  height: 1em;
+  border-radius: 1em;
+
+  left: -2.5em;
+}
+
+.radio2::after {
+  height: 1em;
+  width: 1em;
+
+  background-color: var(--c4);
+  border: 0px solid transparent;
+  border-radius: 50%;
+
+  left: -1.5em;
+
+  display: inline-block;
+
+  transition: left 0.2s ease-in-out;
+}
+
+input:checked + .radio2::after {
+  left: -2.5em;
+}
+
+input:checked + .radio2 {
+  color: red;
+}

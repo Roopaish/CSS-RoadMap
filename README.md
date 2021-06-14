@@ -227,7 +227,8 @@ animation: animationName 0.2s linear infinite;
      <br> <img src='img/ahe.png' ><br><br>
    - Animated Page Load [preview](https://roopaish.github.io/CSS-RoadMap/Animated%20Page%20Load/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Animated%20Page%20Load/)
      <br> <img src='img/apl.png' ><br><br>
-   - Custom Checkbox Tutorial
+   - Custom Checkbox and Radio [preview](https://roopaish.github.io/CSS-RoadMap/Custom%20Checkbox%20and%20Radio/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Custom%20Checkbox%20and%20Radio/)
+     <br> <img src='img/ccar.png' ><br><br>
    - 3D Flip Button
    - Animated Loading Spinner
 

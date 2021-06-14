@@ -8,6 +8,7 @@ let projects = [
   { tag: "Medium", title: "CSS Face Art", img: "cfa" },
   { tag: "Medium", title: "Advanced Hover Effects", img: "ahe" },
   { tag: "Medium", title: "Animated Page Load", img: "apl" },
+  { tag: "Medium", title: "Custom Checkbox and Radio", img: "ccar" },
 ]
 
 projects.map((project) => {
