@@ -1,7 +1,11 @@
 # CSS3 RoadMap
 
-- All projects [Live Preview](https://roopaish.github.io/CSS-RoadMap/)
+Learning Resources
+- [CSS Tips and Tricks](https://markodenic.com/css-tips/)
 - [CheatSheet](https://devhints.io/css)
+
+Indexes
+- [All projects Live Preview](https://roopaish.github.io/CSS-RoadMap/)
 - [Contents](#Contents)
 - [Projects](#Projects)
 
