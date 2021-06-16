@@ -235,7 +235,8 @@ animation: animationName 0.2s linear infinite;
      <br> <img src='img/ccar.png' ><br><br>
    - 3D Flip Button [preview](https://roopaish.github.io/CSS-RoadMap/3D%20Flip%20Button/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/3D%20Flip%20Button/)
      <br> <img src='img/3fb.png' ><br><br>
-   - Animated Loading Spinner
+   - Animated Loading Spinner [preview](https://roopaish.github.io/CSS-RoadMap/Animated%20Preloaders/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Animated%20Preloaders/)
+     <br> <img src='img/ap.png' ><br><br>
 
 3. Hard
 
