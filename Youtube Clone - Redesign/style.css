@@ -405,6 +405,15 @@ main section:not(:last-child){
     --video-width:270px;
     --video-height:130px;
   }
+
+  .post{
+    height: 200px;
+  }
+  .post-content img{
+    width: 100px;
+    height: 50%;
+    object-fit: cover;
+  }
 }
 
 @media (max-width:355px){
