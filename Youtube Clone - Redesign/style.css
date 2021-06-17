@@ -1,0 +1,415 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(font/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto-light;
+  src: url(font/Roboto-Light.ttf);
+}
+
+body {
+  font-family: Roboto-light, Arial, Helvetica, sans-serif;
+  margin: auto;
+  padding: 20px;
+  font-size: 14px;
+}
+
+:root {
+  --bg: hsl(230, 11%, 11%);
+  --red: hsl(358, 51%, 49%);
+  --white-d: hsl(0, 0%, 86%);
+  --grey-d: hsl(0, 0%, 22%);
+  --grey-m: hsl(0, 0%, 30%);
+  --grey: hsl(0, 0%, 67%);
+  --grey-l: hsl(0, 1%, 81%);
+}
+
+body {
+  background-color: var(--bg);
+  color: white;
+  font-weight: 500;
+  max-width: 1474px;
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+img,
+.icons {
+  cursor: pointer;
+}
+
+.icons {
+  filter: invert(1);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  /* background-color:var(--grey-m); */
+}
+
+.icons.menu1 {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+  margin-left: -5px;
+}
+
+.icons.red {
+  filter: invert(15%) sepia(96%) saturate(7291%) hue-rotate(360deg)
+    brightness(102%) contrast(107%);
+}
+
+.title-icon{
+  position: relative;
+  top:2.5px;
+}
+
+/* Sticky */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 20px 0 20px;
+  background-color: #181818e7;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+
+/* Common Properties */
+header,
+nav,
+.categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header{
+  justify-content: space-around;
+}
+
+/* header section  */
+header {
+  font-size: 20px;
+}
+
+header .logo {
+  height: 40px;
+  width: 40px;
+  justify-self: baseline;
+
+}
+
+.search-bar {
+  flex:100%;
+  font-size: 14px;
+  width: 100%;
+  margin: 0 20px;
+  color: white;
+
+  border: none;
+  outline: none;
+  padding: 5px 20px;
+  border-radius: 2px;
+  background-color: transparent;
+  text-align: center;
+}
+
+nav .icons {
+  margin: 0 10px;
+}
+
+.profile-pic {
+  height: 32px;
+  width: 32px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Aside Section  */
+aside {
+  z-index: 200;
+  padding: 10px 20px;
+  position: fixed;
+  left: 0;
+  top: 55px;
+  bottom: 0;
+  background-color: #181818e7;
+
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+aside::-webkit-scrollbar {
+  display: none;
+}
+
+aside section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 55px;
+}
+
+aside section .icons {
+  margin-bottom: 20px;
+}
+
+aside section .icons.channels {
+  filter: none;
+  border-radius: 50%;
+}
+
+/* Categories */
+.categories {
+  margin: 0 50px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+.categories::-webkit-scrollbar {
+  display: none;
+}
+
+.categories span {
+  margin: 12px 12px 12px 0;
+  padding: 5px 12px;
+  background-color: var(--grey-d);
+  border-radius: 50px;
+
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  font-family: Roboto;
+  color: white;
+}
+
+.categories span:first-child {
+  margin-left: 0;
+}
+
+.categories span:hover {
+  background-color: var(--grey-m);
+}
+
+/* Main videos section  */
+main {
+  margin: 100px 50px;
+}
+
+main section:not(:last-child){
+  padding-bottom: 50px;
+  margin-bottom:50px;
+  border-bottom: 1px solid var(--grey);
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 24px 0 24px 0;
+}
+
+.section-title span{
+  margin-left:5px;
+}
+
+.videos {
+  --video-width:320px;
+  --video-height:180px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--video-width), max-content));
+  gap: 30px 20px;
+  justify-content: center;
+}
+
+.video-data {
+  width: var(--video-width);
+}
+
+.video {
+  width: 100%;
+  height: var(--video-height);
+  background-color: var(--grey-d);
+  cursor: pointer;
+  position: relative;
+}
+
+.video img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.video .duration {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: var(--bg);
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.video-info {
+  display: flex;
+  margin-top: 10px;
+  width: var(--video-width);
+}
+
+.channel-pp img {
+  margin-right: 10px;
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.video-text-section{
+  flex:1;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 5px;
+  width: 100%;
+  line-height: 20px;
+  max-height: 45px;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  cursor: pointer;
+}
+
+.channel-name,
+.views_upload-time {
+  font-family: Roboto;
+  color: var(--grey);
+}
+
+.channel-name:hover {
+  color: var(--grey-l);
+  cursor: pointer;
+}
+
+.views_upload-time span:first-child::after {
+  content: "•";
+  margin: 0 4px;
+}
+
+.video-info .more {
+  justify-self: flex-end;
+  margin-top: 2px;
+}
+
+.info-icon{
+  height: 14px;
+  width: 14px;
+}
+
+/* Community Posts */
+.post{
+  background-color: var(--grey-d);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post img{
+  width: 16px;
+  height: 16px;
+}
+
+.post .dislike{
+  transform: rotate(180deg);
+}
+
+.post-icons{
+  font-family: Roboto;
+  color:var(--grey-l);
+}
+
+.channel-detail,.post-content,.post-icons{
+  display: flex;
+}
+
+.post-content{
+  flex:1;
+  margin-top: 10px;
+}
+
+.post-content img{
+  width: 100px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-icons{
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.post-icons .dislike,.post-icons .info-icon{
+  margin-left: 10px;
+}
+
+.post-icons span{
+  padding-left: 5px;
+}
+
+.like-dislike,.comment-info{
+  display: flex;
+  align-items: center;
+}
+
+.comments-info img{
+  width: 14px;
+  height: 14px;
+}
+
+/* media queries  */
+@media (max-width:460px) {
+  aside,.menu1,.menu9-icon,.upload-icon{
+    display: none;
+  }
+
+ .categories{
+    margin:0 20px;
+  }
+
+  main{
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .videos {
+    --video-width:270px;
+    --video-height:130px;
+  }
+}
+
+@media (max-width:355px){
+  .videos {
+    --video-width:250px;
+    --video-height:130px;
+  }
+}

@@ -11,6 +11,7 @@ let projects = [
   { tag: "Medium", title: "Custom Checkbox and Radio", img: "ccar" },
   { tag: "Medium", title: "3D Flip Button", img: "3fb"},
   { tag: "Medium", title: "Animated Preloaders", img: "ap"},
+  { tag: "Hard", title: "Youtube Clone - Redesign", img: "ycr"},
 ]
 
 projects.map((project) => {
