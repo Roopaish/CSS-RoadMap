@@ -28,7 +28,8 @@
   --accentC2: hsl(206, 48%, 51%);
 
   --bgC: hsl(216, 12%, 92%);
-  --bgC: black;
+  --bgC: hsl(0, 0%, 0%);
+  --bgC2:hsl(0, 2%, 11%) ;
 }
 
 html {
@@ -55,7 +56,7 @@ h2 {
   font-size: var(--midF);
   color: var(--textC2);
   font-weight: 500;
-  line-height: 0.7;
+  line-height: 1.1;
   margin-bottom: 2rem;
 }
 
@@ -74,6 +75,7 @@ a {
   text-decoration: none;
   color: var(--textC);
 }
+
 
 .primary-title span {
   position: relative;
@@ -236,34 +238,45 @@ li {
 /* Features  */
 .features{
  /* align-items: flex-start; */
+ width: 100vw;
+ max-width: 1200px;
 }
 
 .features .collection{
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(30rem,max-content));
+  display: flex;
+  align-items: center;
   justify-content: center;
-  gap:2rem;
-  width: 100vw;
+  flex-wrap: wrap;
 }
 
 .features .article{
-  width:100%;
-  max-width: 40rem;
-  padding: 1rem;
+  /* height: 400px; */
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
 
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+
+  border-radius: 5px;
+  background-color: var(--bgC2);
 }
 
+/* .features .article:nth-child(even){
+  flex-direction: row-reverse;
+} */
 
 .feature-details{
-  position: absolute;
-  bottom: 0;
-  left:0;
-  background-color: hsla(225, 39%, 24%, 0.801);
-  padding: 1rem;
-  height: max-content;
+ padding: 30px;
+ height: 100%;
 }
 
+.feature-img{
+  width: 200%;
+  height: 100%;
+}
 
 /* Media Query For Tablet */
 @media (max-width: 768px) {
@@ -314,6 +327,11 @@ li {
   /* hero  */
   .hero{
     flex-direction: column-reverse;
+  }
+
+  /* Feature  */
+  .features .article{
+    flex-wrap: wrap;
   }
 }
 
