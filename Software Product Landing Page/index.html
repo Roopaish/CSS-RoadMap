@@ -76,9 +76,6 @@
 
       </article>
 
-      <article class="article hero-image">
-        <img src="img/background2.jpg" class="image" alt="">
-      </article>
     </div>
   </section>
   <!-- End Hero -->
@@ -300,6 +297,17 @@
   </footer>
   <!--End Footer-->
 
+  <script>
+    const header = document.querySelector('#header');
+    document.addEventListener('scroll', () => {
+      var scroll_position = window.scrollY;
+      if (scroll_position > 190) {
+        header.style.backgroundColor = 'black';
+      } else {
+        header.style.backgroundColor = 'transparent';
+      }
+    });
+  </script>
 </body>
 
 </html>

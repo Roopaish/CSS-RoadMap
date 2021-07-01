@@ -26,10 +26,11 @@
   --accentC: hsl(225, 39%, 24%);
   --accentCT: hsl(225, 38%, 29%);
   --accentC2: hsl(206, 48%, 51%);
+  --accentCO: linear-gradient(hsla(0, 0%, 0%, 0.5) ,rgba(0, 0, 0, 0.9));
 
   --bgC: hsl(216, 12%, 92%);
   --bgC: hsl(0, 0%, 0%);
-  --bgC2:hsl(0, 2%, 11%) ;
+  --bgC2: hsl(0, 2%, 11%);
 }
 
 html {
@@ -66,7 +67,6 @@ p {
   font-weight: 300;
   line-height: 1.6;
   max-width: 60ch;
-  margin-bottom: 6rem;
 }
 
 a {
@@ -75,7 +75,6 @@ a {
   text-decoration: none;
   color: var(--textC);
 }
-
 
 .primary-title span {
   position: relative;
@@ -148,12 +147,13 @@ li {
 
 /* Top heading section */
 #header {
-  background-color: var(--bgC);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 98;
+
+  transition: background-color 1s ease;
 }
 
 .header {
@@ -204,18 +204,22 @@ li {
 .hero {
   padding-top: 10rem;
   flex-direction: row;
-  /* background-color: var(--accentC); */
+  background: var(--accentCO), url("img/background2.jpg") center/cover;
+  min-width: 100vw;
+  padding: 0;
 }
 
 .hero .article {
-  flex: 1 1 50%;
-}
-
-.hero-image {
-  padding-bottom: 2rem;
+  padding: 0 var(--padding);
+  align-self: flex-end;
+  padding-top: 40px;
+  max-width: 1200px;
+  margin:0 auto;
+  width: 100%;
 }
 
 .download-btn {
+  margin-top: 6rem;
   margin-bottom: 5rem;
 }
 
@@ -236,20 +240,20 @@ li {
 }
 
 /* Features  */
-.features{
- /* align-items: flex-start; */
- width: 100vw;
- max-width: 1200px;
+.features {
+  /* align-items: flex-start; */
+  width: 100vw;
+  max-width: 1200px;
 }
 
-.features .collection{
+.features .collection {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.features .article{
+.features .article {
   /* height: 400px; */
   width: 100%;
   max-width: 500px;
@@ -268,12 +272,12 @@ li {
   flex-direction: row-reverse;
 } */
 
-.feature-details{
- padding: 30px;
- height: 100%;
+.feature-details {
+  padding: 30px;
+  height: 100%;
 }
 
-.feature-img{
+.feature-img {
   width: 200%;
   height: 100%;
 }
@@ -325,14 +329,12 @@ li {
   }
 
   /* hero  */
-  .hero{
-    flex-direction: column-reverse;
-  }
-
+ 
   /* Feature  */
-  .features .article{
+  .features .article {
     flex-wrap: wrap;
   }
+
 }
 
 /* Media Query For Mobile */
