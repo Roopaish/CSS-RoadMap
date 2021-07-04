@@ -88,7 +88,7 @@ a {
   background-color: var(--accentC2);
 
   position: absolute;
-  bottom: 0.1em;
+  bottom: 0.15em;
   left: -0.1em;
   z-index: -1;
 }
@@ -194,13 +194,6 @@ li {
 }
 
 /* Hero  */
-#hero {
-  /* background-image: url("img/background2.jpg"); */
-  /* background-size: cover;
-  background-position: center center;
-  background-attachment: fixed; */
-}
-
 .hero {
   padding-top: 10rem;
   flex-direction: row;
@@ -246,7 +239,7 @@ li {
   max-width: 1200px;
 }
 
-.features .collection {
+.collection {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,6 +259,13 @@ li {
 
   border-radius: 5px;
   background-color: var(--bgC2);
+  transition: all .2s linear;
+  cursor:pointer;
+}
+
+.features .article:hover  {
+  background-color:var(--accentCT);
+
 }
 
 /* .features .article:nth-child(even){
@@ -281,6 +281,29 @@ li {
   width: 200%;
   height: 100%;
 }
+
+/* Get Involved  */
+.get-involved{
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.get-involved .article{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width:33%;
+  min-width: 300px;
+  padding: 10px;
+  text-align: center;
+}
+
+.get-involved-img {
+  max-width: 200px;
+}
+
+/* g */
 
 /* Media Query For Tablet */
 @media (max-width: 768px) {
