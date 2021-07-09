@@ -242,5 +242,6 @@ animation: animationName 0.2s linear infinite;
 
    - YouTube Clone [preview](https://roopaish.github.io/CSS-RoadMap/Youtube%20Clone%20-%20Redesign/) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Youtube%20Clone%20-%20Redesign/)
      <br> <img src='img/ycr.png' ><br><br>
-   - Software Product Landing Page
+   - Godot Landing Page [preview](https://roopaish.github.io/CSS-RoadMap/Godot%20Landing%20Page%20-%20Redesign) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Godot%20Landing%20Page%20-%20Redesign)
+     <br> <img src='img/glp.png' ><br><br>
    - Landing Page 2

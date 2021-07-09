@@ -9,9 +9,10 @@ let projects = [
   { tag: "Medium", title: "Advanced Hover Effects", img: "ahe" },
   { tag: "Medium", title: "Animated Page Load", img: "apl" },
   { tag: "Medium", title: "Custom Checkbox and Radio", img: "ccar" },
-  { tag: "Medium", title: "3D Flip Button", img: "3fb"},
-  { tag: "Medium", title: "Animated Preloaders", img: "ap"},
-  { tag: "Hard", title: "Youtube Clone - Redesign", img: "ycr"},
+  { tag: "Medium", title: "3D Flip Button", img: "3fb" },
+  { tag: "Medium", title: "Animated Preloaders", img: "ap" },
+  { tag: "Hard", title: "Youtube Clone - Redesign", img: "ycr" },
+  { tag: "Hard", title: "Godot Landing Page - Redesign", img: "glp" },
 ]
 
 projects.map((project) => {
