@@ -4,6 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  scroll-behavior: smooth;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
@@ -26,7 +28,12 @@
   --accentC: hsl(225, 39%, 24%);
   --accentCT: hsl(225, 38%, 29%);
   --accentC2: hsl(206, 48%, 51%);
-  --accentCO: linear-gradient(hsla(0, 0%, 0%, 0.5), rgba(0, 0, 0, 0.9));
+  --accentC3: hsl(223, 22%, 19%);
+  --accentCO: linear-gradient(
+    hsla(0, 0%, 0%, 0.3),
+    hsla(0, 0%, 0%, 0.6),
+    rgba(0, 0, 0, 0.9)
+  );
 
   --bgC: hsl(216, 12%, 92%);
   --bgC: hsl(0, 0%, 0%);
@@ -42,6 +49,22 @@ body {
   background-color: var(--bgC);
   color: var(--textC);
   overflow-x: hidden;
+
+  scrollbar-width: 10px;
+}
+
+body::-webkit-scrollbar {
+  cursor: pointer;
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(87, 175, 76, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  /* border-radius: 1em; */
+  background-color: var(--accentC2);
 }
 
 /* Global Properties  */
@@ -114,17 +137,14 @@ li {
 }
 
 .container {
-  padding: 0 var(--padding);
+  padding: 10rem var(--padding);
   margin: 0 auto;
   max-width: 1200px;
-  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  padding-top: 10rem;
 }
 
 .image {
@@ -157,6 +177,7 @@ li {
 }
 
 .header {
+  padding-bottom: 0;
   min-height: 5rem;
   flex-direction: row;
   justify-content: space-between;
@@ -195,11 +216,12 @@ li {
 
 /* Hero  */
 .hero {
-  padding-top: 10rem;
+  padding-bottom: 0;
   flex-direction: row;
   background: var(--accentCO), url("img/background2.jpg") center/cover;
+  background-attachment: fixed;
   min-width: 100vw;
-  padding: 0;
+  min-height: 100vh;
 }
 
 .hero .article {
@@ -214,6 +236,8 @@ li {
 .download-btn {
   margin-top: 6rem;
   margin-bottom: 5rem;
+  transition: all 0.2s ease-in-out;
+  filter: brightness(1);
 }
 
 .download-btn::after {
@@ -230,6 +254,10 @@ li {
 
   padding: 0 1rem;
   height: 100%;
+}
+
+.download-btn:hover {
+  filter: brightness(1.2);
 }
 
 /* Features  */
@@ -258,13 +286,33 @@ li {
   margin: 20px auto;
 
   border-radius: 5px;
-  background-color: var(--bgC2);
+  background-color: var(--accentC3);
   transition: all 0.2s linear;
   cursor: pointer;
+
+  position: relative;
+}
+
+.features .article::after {
+  content: "";
+  height: 220%;
+  width: 120%;
+  background-color: var(--bgC2);
+  transform: rotate(45deg);
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  left: 100%;
+  top: 100%;
+  z-index: 1;
 }
 
 .features .article:hover {
-  background-color: var(--accentCT);
+  background-color: transparent;
+}
+.features .article:hover::after {
+  left: 0;
+  top: -50%;
+  background-color: var(--accentC3);
 }
 
 /* .features .article:nth-child(even){
@@ -273,15 +321,18 @@ li {
 
 .feature-details {
   padding: 30px;
-  height: 100%;
+  z-index: 2;
 }
 
 .feature-img {
   width: 200%;
-  height: 100%;
+  z-index: 2;
 }
 
 /* Get Involved  */
+#get-involved {
+  background-color: var(--accentC3);
+}
 .get-involved {
   justify-content: flex-start;
   align-items: flex-start;
@@ -289,7 +340,7 @@ li {
 }
 
 .get-involved .intro p {
-  max-width: max-content;
+  /* max-width: max-content; */
 }
 
 .get-involved .collection {
@@ -307,10 +358,11 @@ li {
   width: 30%;
   min-width: 350px;
   text-align: center;
+  border-radius: 4px;
 }
 
 .get-involved-img {
-  max-width: 250px;
+  max-width: 150px;
 }
 
 .get-involved .secondary-title {
@@ -335,7 +387,7 @@ h3 {
 /* Donate */
 #donate {
   background-color: var(--accentC);
-  margin-top: 10rem;
+  background-attachment: fixed;
 }
 
 .donate.container {
@@ -356,7 +408,11 @@ h3 {
 }
 
 /* Sponsors  */
-.sponsors.container {
+#sponsors {
+  background-color: var(--accentC3);
+}
+
+.sponsors {
   min-height: auto;
 }
 
@@ -378,6 +434,10 @@ h3 {
   text-align: center;
 }
 
+.platinum .sponsor-img {
+  border-color: var(--accentC2);
+}
+
 .sponsor-img img {
   width: auto;
 }
@@ -385,7 +445,6 @@ h3 {
 /* Footer  */
 #footer {
   background-color: var(--accentCT);
-  margin-top: 10rem;
 }
 .footer.container {
   min-height: auto;
@@ -466,7 +525,7 @@ h3 {
 
 /* Media Query For Mobile */
 
-@media (max-width: 325px) {
+@media (max-width: 370px) {
   .nav-links {
     flex-direction: column;
   }
@@ -481,8 +540,9 @@ h3 {
   .copyright {
     width: 100%;
   }
-  /* .footer.container{
+  .footer.container {
+    text-align: center;
     align-items: center;
     justify-content: center;
-  } */
+  }
 }
