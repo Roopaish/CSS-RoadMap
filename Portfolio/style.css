@@ -1,0 +1,31 @@
+*{
+  margin : 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color:white;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+main {
+  margin-top: 100px;
+  height: max-content;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
+  gap: 80px;
+  justify-content: center;
+}
+
+section{
+  width:200px;
+}
