@@ -244,4 +244,3 @@ animation: animationName 0.2s linear infinite;
      <br> <img src='img/ycr.png' ><br><br>
    - Godot Landing Page [preview](https://roopaish.github.io/CSS-RoadMap/Godot%20Landing%20Page%20-%20Redesign) [code](https://github.com/Roopaish/CSS-RoadMap/tree/master/Godot%20Landing%20Page%20-%20Redesign)
      <br> <img src='img/glp.png' ><br><br>
-   - Landing Page 2
