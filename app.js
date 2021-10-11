@@ -15,8 +15,11 @@ let projects = [
   { tag: "Hard", title: "Godot Landing Page - Redesign", img: "glp" },
 ]
 
-projects.map((project) => {
-  section.innerHTML += `
+projects
+  .slice(0)
+  .reverse()
+  .map((project) => {
+    section.innerHTML += `
     <article>
     <div class='tag'>${project.tag}</div>
 
@@ -38,4 +41,4 @@ projects.map((project) => {
 
   </article>
 `
-})
+  })
